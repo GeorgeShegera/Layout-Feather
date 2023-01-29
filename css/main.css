@@ -8,6 +8,10 @@
   font-weight: 400;
 }
 
+main {
+  margin-bottom: 120px;
+}
+
 /*######################################## HEADER ########################################*/
 header {
   font-size: 16px;
@@ -39,7 +43,7 @@ header > img {
   margin-top: 31px;
 }
 
-/*/*######################################## Intro Section /*########################################*/
+/*######################################## Intro Section /*########################################*/
 .introSection {
   margin-left: 10%;
   display: flex;
@@ -71,6 +75,7 @@ header > img {
   width: 154px;
   height: 60px;
   margin-top: 46px;
+  margin-left: 9px;
   border: none;
 
   transition: color, background-color;
@@ -80,4 +85,67 @@ header > img {
 .introSection button:hover {
   color: aquamarine;
   background-color: darkblue;
+}
+
+/*######################################## Room Shop Section /*########################################*/
+.roomShopSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.roomShopSection h2 {
+  font-size: 48px;
+  margin-bottom: 43px;
+  display: flex;
+  justify-content: center;
+}
+
+.roomShopSection > div {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.roomBlock {
+  background: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  box-shadow: 8px 8px 0px;
+
+  transition: color;
+  transition-duration: 1s;
+}
+
+.roomBlock:nth-child(1) {
+  border-color: #e9672b;
+  color: #cbc6f4;
+}
+.roomBlock:nth-child(2) {
+  border-color: #225dca;
+  color: #e7cb43;
+}
+.roomBlock:nth-child(3) {
+  border-color: #242947;
+  color: #a2d4c5;
+}
+.roomBlock:nth-child(4) {
+  border-color: #de4333;
+  color: #af4920;
+}
+
+.roomBlock:hover {
+  color: cyan;
+}
+
+.roomBlock p {
+  color: black;
+  background-color: #ffffff;
+  padding: 15px 0px 19px 0px;
+  font-size: 17px;
 }
