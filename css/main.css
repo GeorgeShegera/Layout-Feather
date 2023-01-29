@@ -39,4 +39,45 @@ header > img {
   margin-top: 31px;
 }
 
-/*/*######################################## Section 1 /*########################################*/
+/*/*######################################## Intro Section /*########################################*/
+.introSection {
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.introSection > div {
+  max-width: 40%;
+}
+
+.introSection > img {
+  margin-top: 18px;
+}
+
+.introSection h1 {
+  font-size: 64px;
+  margin-top: 126px;
+}
+
+.introSection h2 {
+  font-size: 18px;
+  margin-top: 18px;
+}
+
+.introSection button {
+  font-size: 18px;
+  background-color: #e9672b;
+  border-radius: 30px;
+  width: 154px;
+  height: 60px;
+  margin-top: 46px;
+  border: none;
+
+  transition: color, background-color;
+  transition-duration: 2s;
+}
+
+.introSection button:hover {
+  color: aquamarine;
+  background-color: darkblue;
+}
