@@ -180,32 +180,49 @@ header > img {
   max-width: 892px;
 }
 
-/*######################################## Explore Section /*########################################*/
-.explore {
+/*######################################## Explore Section ########################################*/
+.serviceSection {
   display: flex;
   justify-content: space-around;
   margin-top: 32px;
 }
 
-.explore > div {
+.serviceSection > div {
   max-width: 397px;
   margin-top: 89px;
 }
 
-.explore > div > h2 {
+.serviceTitle {
   font-size: 36px;
 }
 
-.explore > div > p {
+.serviceDescrip {
   font-size: 18px;
   margin-top: 20px;
 }
-.explore > div > p:last-child {
+.serviceLink {
   margin-top: 33px;
 }
 
-.explore > div > p > a {
+.serviceLink > a {
   text-decoration: none;
   font-size: 18px;
   color: #e9672b;
+}
+
+/*######################################## Garage Sale ########################################*/
+.serviceSection:nth-child(3) {
+  margin-top: 64px;
+  justify-content: space-between;
+}
+
+.serviceSection:nth-child(3) > div {
+  max-width: 441px;
+  margin-top: 175px;
+  margin-right: 92px;
+}
+
+.serviceDescrip + p {
+  font-size: 18px;
+  margin-top: 26px;
 }
