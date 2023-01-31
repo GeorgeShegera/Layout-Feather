@@ -3,17 +3,24 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #fbf8f5;
   font-family: Roboto;
   font-weight: 400;
 }
 
+body {
+  max-width: 1280px;
+  margin: auto;
+  background-color: #000000;
+}
+
 main {
   margin-bottom: 120px;
+  background-color: #fbf8f5;
 }
 
 /*######################################## HEADER ########################################*/
 header {
+  background-color: #fbf8f5;
   font-size: 16px;
   display: flex;
   justify-content: space-around;
@@ -33,7 +40,6 @@ header > nav > a {
 
 header > nav:first-child {
   width: 33%;
-  margin-left: 50px;
 }
 header > nav:last-child {
   width: 30%;
@@ -45,9 +51,9 @@ header > img {
 
 /*######################################## Intro Section /*########################################*/
 .introSection {
-  margin-left: 10%;
+  /* margin-left: 10%; */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .introSection > div {
@@ -148,4 +154,26 @@ header > img {
   background-color: #ffffff;
   padding: 15px 0px 19px 0px;
   font-size: 17px;
+}
+
+/*######################################## Services Section /*########################################*/
+.servicesSection {
+  background-color: #ffffff;
+  margin-top: 71px;
+}
+.servicesSection > div {
+  padding-top: 131px;
+  padding-bottom: 94px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.servicesSection > div > h2 {
+  text-align: center;
+  font-size: 36px;
+}
+.servicesSection > div > p {
+  font-size: 24px;
+  text-align: center;
+  max-width: 892px;
 }
