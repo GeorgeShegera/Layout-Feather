@@ -230,7 +230,18 @@ header > img {
   font-size: 18px;
   margin-top: 26px;
 }
-
+/*######################################## Garage Sale ########################################*/
 .serviceSection:nth-child(4) > div {
   max-width: 438px;
+}
+
+/*######################################## Garage Sale ########################################*/
+.serviceSection:nth-child(5) {
+  justify-content: space-between;
+}
+
+.serviceSection:nth-child(5) > div {
+  max-width: 425px;
+  margin-top: 153px;
+  margin-right: 108px;
 }
