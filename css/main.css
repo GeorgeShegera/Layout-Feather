@@ -5,6 +5,7 @@
   padding: 0;
   font-family: Roboto;
   font-weight: 400;
+  line-height: 28px;
 }
 
 body {
@@ -34,6 +35,7 @@ header > nav {
 }
 
 header > nav > a {
+  line-height: 24px;
   text-decoration: none;
   color: #000000;
 }
@@ -51,21 +53,24 @@ header > img {
 
 /*######################################## Intro Section /*########################################*/
 .introSection {
+  padding-top: 18px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .introSection > div {
   max-width: 523px;
+  margin-left: 90px;
 }
 
 .introSection > img {
-  margin-top: 18px;
+  margin-right: 15px;
 }
 
 .introSection h1 {
+  line-height: 76px;
   font-size: 64px;
-  margin-top: 126px;
+  margin-top: 104px;
 }
 
 .introSection h2 {
@@ -94,6 +99,7 @@ header > img {
 
 /*######################################## Room Shop Section /*########################################*/
 .roomShopSection {
+  margin-top: 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,6 +165,7 @@ header > img {
 .servicesSection {
   background-color: #ffffff;
   margin-top: 71px;
+  padding-bottom: 223px;
 }
 
 .servicesSection > div {
@@ -170,11 +177,14 @@ header > img {
 }
 
 .servicesSection > div > h2 {
+  line-height: 44px;
   text-align: center;
   font-size: 36px;
+  margin-bottom: 14px;
 }
 
 .servicesSection > div > p {
+  line-height: 32px;
   font-size: 24px;
   text-align: center;
   max-width: 892px;
@@ -192,11 +202,12 @@ header > img {
 }
 
 .serviceSection > div {
-  max-width: 397px;
+  max-width: 438px;
   margin-top: 89px;
 }
 
 .serviceTitle {
+  line-height: 44px;
   font-size: 36px;
 }
 
@@ -214,7 +225,6 @@ header > img {
   color: #e9672b;
 }
 
-/*######################################## Garage Sale ########################################*/
 .serviceSection:nth-child(3) {
   margin-top: 64px;
   justify-content: space-between;
@@ -230,12 +240,7 @@ header > img {
   font-size: 18px;
   margin-top: 26px;
 }
-/*######################################## Garage Sale ########################################*/
-.serviceSection:nth-child(4) > div {
-  max-width: 438px;
-}
 
-/*######################################## Garage Sale ########################################*/
 .serviceSection:nth-child(5) {
   justify-content: space-between;
 }
@@ -244,4 +249,75 @@ header > img {
   max-width: 425px;
   margin-top: 153px;
   margin-right: 108px;
+}
+
+/*######################################## Bestsellers Section########################################*/
+.bestsellersSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bestsellersSection > div {
+  width: 944px;
+}
+
+.bestsellersSection h2 {
+  text-align: center;
+  margin-top: 112px;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.bestsellerBlocks {
+  margin-top: 57px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bestseller {
+  background-color: #ffffff;
+  width: 233px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bestseller img {
+  margin-top: 40px;
+}
+
+.bestseller h3 {
+  text-align: center;
+  margin-top: 31px;
+  font-size: 18px;
+  max-width: 161px;
+}
+
+.bestseller p {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 18px;
+  max-width: 135px;
+}
+
+.rentPrice {
+  color: #e9672b;
+  font-size: 20px;
+}
+
+.oldPrice {
+  color: #4f4f4f;
+}
+
+.shopLink {
+  margin-top: 55px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.shopLink > a {
+  color: #e9672b;
+  text-decoration: none;
 }
