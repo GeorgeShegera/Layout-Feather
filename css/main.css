@@ -321,3 +321,39 @@ header > img {
   color: #e9672b;
   text-decoration: none;
 }
+
+/*######################################## Floyd Furniture ########################################*/
+.floydFurnitureSect {
+  margin-top: 144px;
+  display: flex;
+}
+
+.floydFurnitureSect div {
+  background: #e9672b;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.floydFurnitureSect div > img {
+  margin-top: 61px;
+}
+
+.floydFurnitureSect div > p {
+  margin-top: 27px;
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 44px;
+  max-width: 363px;
+  text-align: center;
+}
+
+.floydFurnitureSect div > button {
+  margin-top: 32px;
+  font-size: 18px;
+  border-radius: 88px;
+  width: 272px;
+  height: 60px;
+  border-style: none;
+}
