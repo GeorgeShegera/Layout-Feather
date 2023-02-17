@@ -500,3 +500,67 @@ header > img {
   font-size: 18px;
   line-height: 28px;
 }
+/*######################################## Footer ########################################*/
+footer {
+  background: #f3f0ec;
+  height: 650px;
+  box-sizing: border-box;
+  padding: 80px;
+}
+
+.footerContent {
+  height: 100%;
+  background-image: url("../imgs/Exit.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.footerContent > div {
+  max-width: 984px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerList {
+  list-style: none;
+}
+
+.footerList li {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+.footerList li:first-child {
+  letter-spacing: 1.28px;
+  margin-top: 0px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+address {
+  width: 387px;
+}
+
+address h2,
+p {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 1.28px;
+}
+
+address ul {
+  margin-bottom: 54px;
+  margin-top: 24px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+address p {
+  max-width: 296px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #000000;
+}
