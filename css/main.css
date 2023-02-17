@@ -467,3 +467,36 @@ header > img {
   display: flex;
   align-items: center;
 }
+
+/*######################################## Furnish Section ########################################*/
+.furnishSect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.furnishSect > div {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.furnishSect p {
+  margin-top: 41px;
+  max-width: 292px;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.furnishSect button {
+  border-style: none;
+  width: 202px;
+  height: 60px;
+  margin-top: 39px;
+  background-color: #e9672b;
+  border-radius: 88px;
+  font-size: 18px;
+  line-height: 28px;
+}
