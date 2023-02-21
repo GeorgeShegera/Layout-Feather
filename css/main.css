@@ -87,7 +87,7 @@ header > img {
   margin-top: 46px;
   margin-left: 9px;
   border: none;
-
+  cursor: pointer;
   transition: color, background-color;
   transition-duration: 2s;
 }
@@ -120,6 +120,7 @@ header > img {
 }
 
 .roomBlock {
+  cursor: pointer;
   background: #ffffff;
   border-radius: 4px;
   display: flex;
@@ -129,7 +130,7 @@ header > img {
   border: 2px solid;
   box-shadow: 8px 8px 0px;
 
-  transition: color;
+  transition: color, border-color;
   transition-duration: 1s;
 }
 
@@ -151,7 +152,8 @@ header > img {
 }
 
 .roomBlock:hover {
-  color: cyan;
+  color: rgb(90, 255, 99);
+  border-color: rgb(90, 255, 99);
 }
 
 .roomBlock p {
@@ -225,6 +227,11 @@ header > img {
   color: #e9672b;
 }
 
+.serviceLink > a:hover {
+  text-underline-offset: 5px;
+  text-decoration: underline;
+}
+
 .serviceSection:nth-child(3) {
   margin-top: 64px;
   justify-content: space-between;
@@ -260,6 +267,7 @@ header > img {
 
 .bestsellersSection > div {
   width: 944px;
+  min-height: 728px;
 }
 
 .bestsellersSection h2 {
@@ -282,6 +290,11 @@ header > img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+}
+
+.bestseller:hover {
+  border: 1px solid black;
 }
 
 .bestseller img {
@@ -322,6 +335,11 @@ header > img {
   text-decoration: none;
 }
 
+.shopLink > a:hover {
+  text-underline-offset: 5px;
+  text-decoration: underline;
+}
+
 /*######################################## Floyd Furniture ########################################*/
 .floydFurnitureSect {
   margin-top: 144px;
@@ -350,12 +368,21 @@ header > img {
 }
 
 .floydFurnitureSect div > button {
+  cursor: pointer;
   margin-top: 32px;
   font-size: 18px;
   border-radius: 88px;
   width: 272px;
   height: 60px;
   border-style: none;
+
+  transition: background-color, color;
+  transition-duration: 2s;
+}
+
+.floydFurnitureSect div > button:hover {
+  background-color: darkblue;
+  color: aquamarine;
 }
 
 /*######################################## Reviews Furniture ########################################*/
@@ -491,6 +518,7 @@ header > img {
 }
 
 .furnishSect button {
+  cursor: pointer;
   border-style: none;
   width: 202px;
   height: 60px;
@@ -499,12 +527,20 @@ header > img {
   border-radius: 88px;
   font-size: 18px;
   line-height: 28px;
+
+  transition: color, background-color;
+  transition-duration: 2s;
+}
+
+.furnishSect button:hover {
+  color: aquamarine;
+  background-color: darkblue;
 }
 /*######################################## Footer ########################################*/
 footer {
+  box-sizing: content-box;
   background: #f3f0ec;
   height: 650px;
-  box-sizing: border-box;
   padding: 80px;
 }
 
@@ -526,9 +562,19 @@ footer {
 }
 
 .footerList li {
+  margin-top: 8px;
+}
+
+.footerList a {
+  text-decoration: none;
   font-size: 16px;
   line-height: 24px;
-  margin-top: 8px;
+  color: black;
+}
+
+.footerList a:hover {
+  text-underline-offset: 3px;
+  text-decoration: underline;
 }
 
 .footerList li:first-child {
@@ -542,8 +588,8 @@ address {
   width: 387px;
 }
 
-address h2,
-p {
+address > h2,
+address > p {
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
