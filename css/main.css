@@ -23,32 +23,51 @@ main {
 header {
   background-color: #fbf8f5;
   font-size: 16px;
+  /* display: flex; */
+  /* justify-content: space-around; */
+}
+#menuToggle {
+  display: none;
+}
+.menuBtn {
+  display: none;
+}
+
+.menuBox {
   display: flex;
   justify-content: space-around;
 }
 
-header > nav {
+.menuBox > nav {
   margin-top: 33px;
-  width: 148px;
+  /* width: 148px; */
   display: flex;
   justify-content: space-between;
 }
 
-header > nav > a {
+header a {
   line-height: 24px;
   text-decoration: none;
   color: #000000;
 }
 
-header > nav:first-child {
+header a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.menuBox > nav:first-of-type {
   width: 33%;
 }
-header > nav:last-child {
+.menuBox > nav:last-of-type {
   width: 30%;
 }
 
-header > img {
+img[alt="Logo"] {
   margin-top: 31px;
+}
+img[alt="outerLogo"] {
+  display: none;
 }
 
 /*######################################## Intro Section /*########################################*/
@@ -609,4 +628,197 @@ address p {
   max-width: 296px;
   padding-bottom: 60px;
   border-bottom: 1px solid #000000;
+}
+
+@media (max-width: 1280px) {
+  .introSection {
+    display: flex;
+    justify-content: space-around;
+  }
+  .introSection > div {
+    margin-left: 0px;
+  }
+  .introSection h1 {
+    margin-top: 15%;
+  }
+  .introSection > img {
+    margin-top: 4%;
+    width: 40%;
+    height: 40%;
+  }
+  .introSection button {
+    margin-top: 25px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .menuBox > nav:first-of-type {
+    width: 39%;
+  }
+  .menuBox > nav:last-of-type {
+    width: 39%;
+  }
+
+  .introSection > div {
+    max-width: 346px;
+  }
+
+  img[alt="Logo"] {
+    margin-top: 25px;
+    max-height: 34px;
+  }
+}
+
+@media (max-width: 850px) {
+  img[alt="outerLogo"] {
+    display: block;
+    width: 125px;
+    padding: 25px 0 0 10%;
+  }
+
+  .introSection {
+    padding: 0;
+  }
+
+  img[alt="Logo"] {
+    display: none;
+  }
+
+  .menuBtn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 28px;
+    right: 25px;
+
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .menuBtn > span,
+  .menuBtn > span::before,
+  .menuBtn > span::after {
+    display: block;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 2px;
+  }
+
+  .menuBtn > span::before {
+    content: "";
+    top: -10px;
+  }
+
+  .menuBtn > span::after {
+    content: "";
+    top: 10px;
+  }
+
+  .menuBox > nav {
+    margin: 0px;
+    width: 100% !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menuBox {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    width: 30%;
+    /* height: 40%; */
+    padding-top: 80px;
+    text-align: center;
+    background-color: #fbf8f5;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    font-size: 20px;
+  }
+
+  #menuToggle:checked ~ .menuBtn > span {
+    transform: rotate(45deg);
+  }
+  #menuToggle:checked ~ .menuBtn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menuToggle:checked ~ .menuBtn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menuToggle:checked ~ .menuBox {
+    visibility: visible;
+    right: 0;
+  }
+
+  .menuBtn > span,
+  .menuBtn > span::before,
+  .menu__btn > span::after {
+    transition-duration: 0.25s;
+  }
+
+  .menuBox {
+    transition-duration: 0.25s;
+  }
+
+  .introSection > img {
+    display: none;
+  }
+  .introSection > div {
+    max-width: none;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .menuBox {
+    width: 45%;
+  }
+}
+
+@media (max-width: 670px) {
+  .menuBox {
+    width: 45%;
+  }
+}
+
+@media (max-width: 550px) {
+  .introSection h1 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  .introSection div {
+    width: 90%;
+  }
+  .introSection h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 505px) {
+  .menu__item {
+    padding: 8px 24px;
+  }
+}
+
+@media (max-width: 420px) {
+}
+
+@media (max-width: 340px) {
+  .menuBox {
+    width: 55%;
+  }
 }

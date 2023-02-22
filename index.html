@@ -9,18 +9,27 @@
   </head>
   <body>
     <header>
-      <nav>
-        <a href="#">Furniture</a>
-        <a href="#">Why Feather</a>
-        <a href="#">Feather for Business</a>
-      </nav>
-      <img src="imgs/Logo.png" alt="Logo" />
-      <nav>
-        <a href="#">Check if We Deliver</a>
-        <a href="#">Search</a>
-        <a href="#">Account</a>
-        <a href="#"><img src="imgs/Shop.png" alt="Shop" /></a>
-      </nav>
+      <input id="menuToggle" type="checkbox" />
+      <label class="menuBtn" for="menuToggle">
+        <span></span>
+      </label>
+      <img src="imgs/Logo.png" alt="outerLogo" />
+      <div class="menuBox">
+        <nav>
+          <a href="#" class="menu__item">Furniture</a>
+          <a href="#" class="menu__item">Why Feather</a>
+          <a href="#" class="menu__item">Feather for Business</a>
+        </nav>
+        <img src="imgs/Logo.png" alt="Logo" />
+        <nav>
+          <a href="#" class="menu__item">Check if We Deliver</a>
+          <a href="#" class="menu__item">Search</a>
+          <a href="#" class="menu__item">Account</a>
+          <a href="#" class="menu__item"
+            ><img src="imgs/Shop.png" alt="Shop"
+          /></a>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="introSection">
