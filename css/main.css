@@ -136,6 +136,7 @@ img[alt="outerLogo"] {
   display: flex;
   justify-content: space-between;
   width: 90%;
+  flex-wrap: wrap;
 }
 
 .roomBlock {
@@ -190,6 +191,12 @@ img[alt="outerLogo"] {
 }
 
 .servicesSection > div {
+  display: flex;
+  justify-content: center;
+}
+
+.servicesTitle {
+  max-width: 90%;
   padding-top: 131px;
   padding-bottom: 94px;
   display: flex;
@@ -197,14 +204,14 @@ img[alt="outerLogo"] {
   align-items: center;
 }
 
-.servicesSection > div > h2 {
+.servicesTitle > h2 {
   line-height: 44px;
   text-align: center;
   font-size: 36px;
   margin-bottom: 14px;
 }
 
-.servicesSection > div > p {
+.servicesTitle > p {
   line-height: 32px;
   font-size: 24px;
   text-align: center;
@@ -222,9 +229,10 @@ img[alt="outerLogo"] {
   margin-top: 32px;
 }
 
-.serviceSection > div {
+.serviceSection > div:nth-child(2n + 1) {
   max-width: 438px;
   margin-top: 89px;
+  margin-left: 40px;
 }
 
 .serviceTitle {
@@ -256,7 +264,7 @@ img[alt="outerLogo"] {
   justify-content: space-between;
 }
 
-.serviceSection:nth-child(3) > div {
+.serviceSection:nth-child(2n + 1) > div {
   max-width: 441px;
   margin-top: 175px;
   margin-right: 92px;
@@ -629,7 +637,7 @@ address p {
   padding-bottom: 60px;
   border-bottom: 1px solid #000000;
 }
-
+/* Media */
 @media (max-width: 1280px) {
   .introSection {
     display: flex;
@@ -637,18 +645,36 @@ address p {
   }
   .introSection > div {
     margin-left: 0px;
+    max-width: 450px;
   }
   .introSection h1 {
     margin-top: 15%;
   }
   .introSection > img {
-    margin-top: 4%;
+    margin-top: 20px;
+    min-width: 414px;
     width: 40%;
     height: 40%;
+    margin-right: 0px;
   }
   .introSection button {
     margin-top: 25px;
     margin-left: 0px;
+  }
+
+  .roomBlock {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .serviceSection > div:nth-child(2n + 1) {
+    margin-top: 40px;
+  }
+
+  .serviceSection:nth-child(2n) img {
+    width: 414px;
   }
 }
 
@@ -660,13 +686,33 @@ address p {
     width: 39%;
   }
 
-  .introSection > div {
-    max-width: 346px;
+  .serviceSection:nth-child(2n + 1) > div {
+    display: inline-block;
+    margin-right: 40px;
+    margin-top: 60px;
+    /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  }
+  .serviceSection:nth-child(2n + 1) > img {
+    width: 416px;
   }
 
   img[alt="Logo"] {
     margin-top: 25px;
     max-height: 34px;
+  }
+}
+
+@media (max-width: 950px) {
+  .introSection > div {
+    max-width: 370px;
+  }
+
+  .servicesTitle {
+    max-width: 80%;
+  }
+
+  .serviceSection > div:nth-child(2n + 1) {
+    max-width: 355px;
   }
 }
 
@@ -689,7 +735,7 @@ address p {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 28px;
+    top: 25px;
     right: 25px;
 
     width: 30px;
@@ -732,7 +778,6 @@ address p {
     top: 0;
     right: 0;
     width: 30%;
-    /* height: 40%; */
     padding-top: 80px;
     text-align: center;
     background-color: #fbf8f5;
@@ -781,6 +826,31 @@ address p {
     align-items: center;
     text-align: center;
   }
+
+  .serviceSection:nth-child(2n) {
+    flex-direction: column;
+    align-items: center;
+  }
+  .serviceSection > div:nth-child(2n + 1) {
+    margin: 0;
+    max-width: 80%;
+  }
+
+  .serviceSection > div:nth-child(2n + 1) .serviceTitle {
+    text-align: center;
+  }
+
+  .serviceSection > div:nth-child(2n + 1) .serviceDescrip {
+    text-align: center;
+  }
+
+  .serviceSection > div:nth-child(2n + 1) .serviceLink {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .serviceSection:nth-child(2n) img {
+    width: 80%;
+  }
 }
 
 @media (max-width: 750px) {
@@ -795,6 +865,13 @@ address p {
   }
 }
 
+@media (max-width: 613px) {
+  .roomShopSection > div {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 @media (max-width: 550px) {
   .introSection h1 {
     font-size: 40px;
@@ -805,6 +882,34 @@ address p {
   }
   .introSection h2 {
     font-size: 16px;
+  }
+
+  .roomShopSection h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .roomShopSection {
+    margin-top: 60px;
+  }
+  .roomBlock {
+    margin-left: 0px;
+  }
+
+  .servicesTitle {
+    max-width: 90%;
+  }
+  .servicesTitle > h2 {
+    font-size: 30px;
+  }
+  .servicesTitle > p {
+    font-size: 20px;
+  }
+
+  .serviceSection > div:nth-child(2n + 1) .serviceTitle {
+    font-size: 30px;
+  }
+  .serviceSection:nth-child(2n) img {
+    width: 90%;
   }
 }
 
@@ -820,5 +925,8 @@ address p {
 @media (max-width: 340px) {
   .menuBox {
     width: 55%;
+  }
+  .roomShopSection h2 {
+    font-size: 35px;
   }
 }
