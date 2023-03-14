@@ -588,10 +588,12 @@ footer {
   max-width: 984px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap-reverse;
 }
 
 .footerList {
   list-style: none;
+  margin-left: 40px;
 }
 
 .footerList li {
@@ -704,6 +706,19 @@ address p {
   }
 }
 
+@media (max-width: 1055px) {
+  address {
+    display: flex;
+    flex-direction: column;
+  }
+  address p {
+    border-bottom: none;
+  }
+  address ul {
+    margin-bottom: 30px;
+  }
+}
+
 @media (max-width: 1050px) {
   .menuBox > nav:first-of-type {
     width: 39%;
@@ -780,6 +795,12 @@ address p {
   .movingSect {
     height: auto;
     padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 870px) {
+  footer {
+    padding: 40px;
   }
 }
 
@@ -995,6 +1016,25 @@ address p {
   }
 }
 
+@media (max-width: 600px) {
+  .footerList {
+    margin-top: 20px;
+  }
+  footer {
+    height: auto;
+    padding: 20px;
+  }
+  address p {
+    padding-bottom: 30px;
+  }
+  .footerList {
+    margin-top: 40px;
+  }
+  .footerList li:first-child {
+    margin-bottom: 0px;
+  }
+}
+
 @media (max-width: 550px) {
   .introSection h1 {
     font-size: 40px;
@@ -1111,6 +1151,14 @@ address p {
     font-size: 40px;
     line-height: 70px;
   }
+
+  .footerList a {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .footerContent {
+    background-image: none;
+  }
 }
 
 @media (max-width: 505px) {
@@ -1170,6 +1218,31 @@ address p {
   }
   .furnishSect div {
     margin-top: 80px;
+  }
+}
+
+@media (max-width: 361px) {
+  .footerContent > div {
+    justify-content: center;
+  }
+  address ul {
+    width: 100%;
+  }
+  address {
+    align-items: center;
+  }
+
+  .footerList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+  }
+  address ul {
+    flex-wrap: wrap;
+  }
+  address li {
+    margin-right: 10px;
   }
 }
 
