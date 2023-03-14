@@ -308,9 +308,11 @@ img[alt="outerLogo"] {
   margin-top: 57px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .bestseller {
+  box-sizing: border-box;
   background-color: #ffffff;
   width: 233px;
   height: 430px;
@@ -373,6 +375,10 @@ img[alt="outerLogo"] {
   display: flex;
 }
 
+.floydFurnitureSect > img {
+  width: 65%;
+}
+
 .floydFurnitureSect div {
   background: #e9672b;
   width: 100%;
@@ -431,14 +437,14 @@ img[alt="outerLogo"] {
 .reviewsContent {
   display: flex;
   flex-direction: column;
-  /*width: 1090px;*/
-  width: 1200px;
+  width: 94%;
 }
 
 .reviewsBlocks {
   margin-top: 57px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .reviewBlock {
@@ -446,12 +452,12 @@ img[alt="outerLogo"] {
   box-shadow: 8px -8px 0px #cbc6f4;
   border-radius: 4px;
   background-color: #ffffff;
-  /* width: 396px; */
   width: 380px;
   height: 254px;
   box-sizing: border-box;
   padding: 34px 0px 0px 34px;
   font-size: 18px;
+  margin-left: 12px;
 }
 
 .reviewBlock:nth-child(2) {
@@ -511,7 +517,7 @@ img[alt="outerLogo"] {
 
 .movingSect > ul {
   margin-top: 41px;
-  width: 1024px;
+  width: 85%;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -637,7 +643,7 @@ address p {
   padding-bottom: 60px;
   border-bottom: 1px solid #000000;
 }
-/* Media */
+/*######################################## Media ########################################*/
 @media (max-width: 1280px) {
   .introSection {
     display: flex;
@@ -668,6 +674,12 @@ address p {
   }
 }
 
+@media (max-width: 1269px) {
+  .reviewBlock {
+    margin-top: 25px;
+  }
+}
+
 @media (max-width: 1150px) {
   .serviceSection > div:nth-child(2n + 1) {
     margin-top: 40px;
@@ -675,6 +687,20 @@ address p {
 
   .serviceSection:nth-child(2n) img {
     width: 414px;
+  }
+
+  .floydFurnitureSect div > button {
+    width: 230px;
+    height: 50px;
+    margin-top: 20px;
+  }
+  .floydFurnitureSect div > p {
+    margin: 20px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .floydFurnitureSect div > img {
+    margin-top: 50px;
   }
 }
 
@@ -690,7 +716,6 @@ address p {
     display: inline-block;
     margin-right: 40px;
     margin-top: 60px;
-    /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
   }
   .serviceSection:nth-child(2n + 1) > img {
     width: 416px;
@@ -699,6 +724,36 @@ address p {
   img[alt="Logo"] {
     margin-top: 25px;
     max-height: 34px;
+  }
+
+  .bestsellerBlocks {
+    width: 90%;
+  }
+  .bestsellersSection > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bestseller {
+    margin-top: 12px;
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .floydFurnitureSect div > button {
+    width: 230px;
+    height: 50px;
+    margin-top: 0px;
+    font-size: 16px;
+  }
+  .floydFurnitureSect div > p {
+    margin: 20px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .floydFurnitureSect div > img {
+    margin-top: 40px;
   }
 }
 
@@ -713,6 +768,31 @@ address p {
 
   .serviceSection > div:nth-child(2n + 1) {
     max-width: 355px;
+  }
+
+  .movingSect > ul {
+    width: 95%;
+  }
+  .movingSect > h2 {
+    font-size: 70px;
+    max-width: 95%;
+  }
+  .movingSect {
+    height: auto;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 853px) {
+  .reviewsContent {
+    align-items: center;
+  }
+  .reviewsBlocks {
+    flex-direction: column;
+    align-items: center;
+  }
+  .reviewBlock {
+    margin-left: 0px;
   }
 }
 
@@ -834,22 +914,65 @@ address p {
   .serviceSection > div:nth-child(2n + 1) {
     margin: 0;
     max-width: 80%;
+    text-align: center;
+  }
+
+  .serviceSection:not(:first-child) {
+    margin-top: 100px !important;
   }
 
   .serviceSection > div:nth-child(2n + 1) .serviceTitle {
     text-align: center;
   }
-
-  .serviceSection > div:nth-child(2n + 1) .serviceDescrip {
-    text-align: center;
-  }
-
-  .serviceSection > div:nth-child(2n + 1) .serviceLink {
-    text-align: center;
+  .serviceLink {
     margin-bottom: 15px;
   }
-  .serviceSection:nth-child(2n) img {
-    width: 80%;
+  .serviceSection img {
+    width: 80% !important;
+  }
+
+  .serviceSection:nth-child(2n + 1) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .serviceSection:nth-child(2n + 1) > div {
+    margin: 0px;
+    max-width: 80%;
+    text-align: center;
+  }
+  .serviceSection:nth-child(2n + 1) > img {
+    max-width: 500px;
+  }
+
+  .floydFurnitureSect {
+    flex-direction: column-reverse;
+  }
+  .floydFurnitureSect > img {
+    width: 100%;
+  }
+  .floydFurnitureSect div p {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  .floydFurnitureSect div > button {
+    margin-bottom: 25px;
+    font-size: 18px;
+    width: 250px;
+    height: 60px;
+  }
+
+  .movingSect > h2 {
+    font-size: 50px;
+  }
+  .movingSect > ul {
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .movingSect > ul li {
+    margin-left: 20px;
+    margin-top: 30px;
   }
 }
 
@@ -899,17 +1022,94 @@ address p {
     max-width: 90%;
   }
   .servicesTitle > h2 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .servicesTitle > p {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 28px;
   }
 
-  .serviceSection > div:nth-child(2n + 1) .serviceTitle {
-    font-size: 30px;
+  .serviceTitle {
+    font-size: 25px;
+    line-height: 36px;
   }
-  .serviceSection:nth-child(2n) img {
-    width: 90%;
+  .serviceDescrip {
+    font-size: 16px;
+  }
+  .serviceSection img {
+    width: 90% !important;
+  }
+  .serviceDescrip + p {
+    font-size: 16px;
+  }
+  .serviceLink a {
+    font-size: 16px;
+  }
+
+  .servicesSection {
+    padding-bottom: 150px;
+  }
+
+  .bestsellersSection h2 {
+    margin-top: 50px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .bestsellerBlocks {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bestseller {
+    margin-right: 0px;
+  }
+  .shopLink {
+    font-size: 16px;
+  }
+
+  .floydFurnitureSect {
+    margin-top: 90px;
+  }
+  .floydFurnitureSect div p {
+    font-size: 25px;
+    line-height: 30px;
+    max-width: 300px;
+  }
+  .floydFurnitureSect div > button {
+    margin-bottom: 25px;
+    font-size: 16px;
+    width: 230px;
+    height: 45px;
+  }
+
+  .reviewsBlocks {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .reviewsSect h2 {
+    font-size: 35px;
+    line-height: 52px;
+  }
+  .reviewBlock {
+    height: 214px;
+  }
+  .reviewBlock > p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .reviewBlock > p:nth-child(2) {
+    margin-top: 15px;
+  }
+  .reviewBlock > p:nth-child(3) {
+    margin-top: 20px;
+  }
+
+  .servicesTitle {
+    padding-bottom: 0px;
+  }
+
+  .movingSect > h2 {
+    font-size: 40px;
+    line-height: 70px;
   }
 }
 
@@ -919,7 +1119,58 @@ address p {
   }
 }
 
+@media (max-width: 570px) {
+  .movingSect > h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .movingSect > ul li {
+    width: 50%;
+    justify-content: center;
+    margin-left: 0px;
+  }
+  .movingSect > ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .movingSect {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 440px) {
+  .reviewBlock {
+    padding: 20px 20px 0px 20px;
+    width: 94%;
+  }
+
+  .reviewsSect h2 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
 @media (max-width: 420px) {
+  .serviceDescrip {
+    margin-top: 15px;
+  }
+  .serviceDescrip + p {
+    margin-top: 15px;
+  }
+  .serviceLink {
+    margin-top: 15px;
+  }
+  .floydFurnitureSect > img {
+    display: none;
+  }
+
+  .furnishSect p {
+    font-size: 18px;
+    max-width: 85%;
+  }
+  .furnishSect div {
+    margin-top: 80px;
+  }
 }
 
 @media (max-width: 340px) {
@@ -928,5 +1179,9 @@ address p {
   }
   .roomShopSection h2 {
     font-size: 35px;
+  }
+
+  .furnishSect img {
+    width: 90%;
   }
 }
